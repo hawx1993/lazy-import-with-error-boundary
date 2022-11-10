@@ -2,43 +2,32 @@
   "name": "lazy-import-with-error-boundary",
   "version": "0.1.0",
   "description": "lazy import react hooks component with error boundary",
-  "main": "lib/index.js",
-  "module": "esm/index.js",
   "sideEffects": false,
   "files": [
-    "lib/",
-    "esm/"
+    "dist"
   ],
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
+  "module": "dist/esm/index.js",
+  "main": "dist/cjs/index.js",
+  "typings": "dist/esm/index.d.ts",
   "scripts": {
-    "test": "jest --maxWorkers 2",
-    "test:ssr": "jest --maxWorkers 2 --config ./jest.config.node.ts",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "lint": "eslint \"{src,tests,stories}/**/*.{ts,tsx}\"",
-    "lint:fix": "yarn lint --fix",
-    "lint:types": "tsc --noEmit",
-    "build:cjs": "tsc",
-    "build:es": "tsc -m esNext --outDir esm",
-    "build": "yarn build:cjs && yarn build:es",
-    "clean": "rimraf lib storybook-static esm",
-    "release": "semantic-release"
+    "build": "npx father  build",
+    "version": "npm run build",
+    "prepublishOnly": "npm version patch && git push",
+    "release": "npm run build && npm publish"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn lint && yarn clean && yarn build && yarn test"
+      "pre-push": "yarn lint && yarn clean && yarn build"
     }
   },
   "author": "@hawx1993",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/streamich/react-use"
+    "type": "git"
   },
   "dependencies": {
-    "@loadable/component": "^5.15.2",
+    "@loadable/component": "5.12.0",
     "antd": "^4.24.1",
     "react": "^18.2.0"
   },
@@ -46,7 +35,15 @@
     "react": "^16.8.0  || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0  || ^17.0.0 || ^18.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.19.6",
+    "@babel/preset-env": "7.19.4",
+    "@babel/preset-typescript": "7.18.6",
+    "father": "^4.1.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "react-dom": "^18.2.0"
+  },
   "config": {
     "commitizen": {
       "path": "git-cz"
