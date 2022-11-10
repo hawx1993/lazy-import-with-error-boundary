@@ -1,6 +1,6 @@
 {
   "name": "lazy-import-with-error-boundary",
-  "version": "17.4.0",
+  "version": "0.1.0",
   "description": "lazy import react hooks component with error boundary",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -31,16 +31,12 @@
       "pre-push": "yarn lint && yarn clean && yarn build && yarn test"
     }
   },
-  "author": "@streamich",
-  "license": "Unlicense",
+  "author": "@hawx1993",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/streamich/react-use"
   },
-  "bugs": {
-    "url": "https://github.com/streamich/react-use/issues"
-  },
-  "homepage": "https://github.com/streamich/react-use#readme",
   "dependencies": {
     "@loadable/component": "^5.15.2",
     "antd": "^4.24.1",
