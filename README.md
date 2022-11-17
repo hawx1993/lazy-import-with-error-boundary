@@ -7,10 +7,13 @@
   <img src="https://img.shields.io/github/issues/hawx1993/lazy-import-with-error-boundary" />
 </p>
 
+Features are as below:
 
-Support code splitting, support load on-demand , support hooks component error boundary.
+- Support code splitting
+- support load on-demand
+- support hooks component error boundary.
+- Support refresh function on bottom page
 
-If your page crashed , there will be a bottom page that supports refresh function
 ### Usages
 
 1、install
