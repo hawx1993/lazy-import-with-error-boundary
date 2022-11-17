@@ -8,13 +8,17 @@ interface DefaultImportedComponent<P> {
 }
 type DefaultComponent<P> = React.ComponentType<P> | DefaultImportedComponent<P>;
 
-const Error = ({ retry }: ErrorProps) => <TryAgainPage onReload={retry} />;
+const ErrorComponent = ({ retry }: ErrorProps) => (
+  <TryAgainPage onReload={retry} />
+);
 
 export function lazyEntrance<T>(
-  loadFn: (props: T) => Promise<DefaultComponent<T>>
+  loadFn: (props: T) => Promise<DefaultComponent<T>>,
+  customErrorComponent?: React.ComponentType<ErrorProps>,
 ) {
   return loadableComponent(loadFn, {
     Loading: null,
-    Error,
+    Error: customErrorComponent || ErrorComponent,
   });
 }
+export { ErrorComponent };
