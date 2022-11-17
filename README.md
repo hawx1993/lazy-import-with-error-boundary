@@ -20,3 +20,11 @@ export const Entrance = lazyEntrance(() =>
   ),
 );
 ```
+
+### Demo
+
+```bash
+$ yarn run dev
+```
+
+<img src="./demo/WechatIMG591.png" />

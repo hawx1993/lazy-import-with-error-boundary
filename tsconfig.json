@@ -28,8 +28,5 @@
     "lib",
     "esm",
     "tests",
-    "stories",
-    "jest.config.ts",
-    "jest.config.*.ts"
   ]
 }
