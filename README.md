@@ -1,5 +1,16 @@
 # lazy-import-with-error-boundary
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/hawx1993/lazy-import-with-error-boundary" />
+  <img src="https://img.shields.io/github/stars/hawx1993/lazy-import-with-error-boundary" /> 
+  <img src="https://img.shields.io/github/forks/hawx1993/lazy-import-with-error-boundary" /> 
+  <img src="https://img.shields.io/github/issues/hawx1993/lazy-import-with-error-boundary" />
+</p>
+
+
+Support code splitting, support load on-demand , support hooks component error boundary.
+
+If your page crashed , there will be a bottom page that supports refresh function
 ### Usages
 
 1、install
