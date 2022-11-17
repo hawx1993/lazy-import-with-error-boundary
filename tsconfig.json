@@ -16,13 +16,15 @@
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
+    "outDir": "dist",
     "lib": [
       "es2018",
       "dom"
     ],
     "importHelpers": true
   },
+  "include": ["src/**/*"],
+  "files": ["./typings/global.d.ts"],
   "exclude": [
     "node_modules",
     "lib",

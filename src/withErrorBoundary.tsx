@@ -51,7 +51,7 @@ export default function withErrorBoundary<P>(
     }
 
     render() {
-      if (this.state.hasError) {
+      if (this.state.hasError && options.Error) {
         const { Error } = options;
         return <Error retry={this.retry} />;
       }

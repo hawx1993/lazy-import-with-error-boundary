@@ -9,7 +9,7 @@ type ErrorProps = {
 };
 
 type Options = {
-  Error?: React.ComponentType<ErrorProps>;
+  Error?: React.ElementType<ErrorProps>;
 };
 
 export { State, ErrorProps, Options };

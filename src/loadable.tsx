@@ -11,7 +11,7 @@ import { ErrorProps } from './types';
 type LoadableComponentOptions<T> = {
   timeout?: number;
   delay?: number;
-  Error?: React.ComponentType<ErrorProps>;
+  Error?: React.ElementType<ErrorProps>;
   retries?: number;
 } & Options<T>;
 
