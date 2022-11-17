@@ -1,6 +1,6 @@
 {
   "name": "lazy-import-with-error-boundary",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "lazy import react hooks component with error boundary",
   "sideEffects": false,
   "files": [
